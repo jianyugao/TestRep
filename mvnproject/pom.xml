@@ -12,6 +12,7 @@
 				<version>1.2.1</version>
 				<configuration>
 					<mainClass>mvn1.mainInput.MainArgument</mainClass>
+					<mainClass>mvn1.mainInput.SecondMain</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
