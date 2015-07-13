@@ -1,0 +1,39 @@
+1. How to execute two mains in one jar!
+<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<id>first-execution</id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>com.itu.logic.CollectionDataSync</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id>second-execution</id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>com.itu.logic.ConfigurationDataSync</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+Command:
+(1)mvn start: 
+	mvn exec:java -Dexec.mainClass="mvn1.mainInput.MainArgument" -Dexec.args="35 23 24" 
+
+(2)java start jarfile:
+	java -classpath edu.itu-0.0.1-SNAPSHOT.jar mvn1.mainInput.MainArgument arg0 arg1
+
+(3)java class: 
+	java mvn1.mainInput.MainArgument arg0 arg1m
+
+
+(4)mvn exec:java -Dexec.mainClass="com.itu.logic.llectionDataSync"
